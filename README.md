@@ -1,92 +1,108 @@
-# xkolari1
+# CarExpense - Aplikace pro správu nákladů na automobil
 
+## 📱 O aplikaci
 
+**CarExpense** je komplexní Android aplikace napsaná v Kotlinu pro správu a sledování všech nákladů spojených s vlastnictvím automobilu. Aplikace umožňuje uživatelům efektivně spravovat výdaje, plánovat údržbu a sledovat statistiky nákladů.
 
-## Getting started
+## ✨ Klíčové funkce
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 💰 Správa výdajů
+- **Kategorizace výdajů**: Palivo, údržba, pojištění, technická kontrola, parkování, splátky a další
+- **Automatické čtení účtenek**: Použití ML Kit pro rozpoznávání textu z fotografií účtenek
+- **Historie výdajů**: Kompletní přehled všech zaznamenaných nákladů
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 🛠️ Plánování údržby
+- **Opakované úkony**: Výměna oleje, kontrola brzd, výměna filtrů, geometrie a další
+- **Dvojí plánování**: Podle kilometrů nebo času
+- **Upozornění**: Automatické notifikace o nadcházejících úkonech
 
-## Add your files
+### 📊 Statistiky a analýzy
+- **Roční přehledy**: Celkové náklady, průměrné náklady na kilometr
+- **Amortizace**: Automatický výpočet roční amortizace vozidla
+- **Grafy a trendy**: Vizuální zobrazení vývoje nákladů
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### 🗺️ Integrované mapy
+- **Čerpací stanice**: Zobrazení nejbližších čerpacích stanic pomocí Google Maps
+- **Overpass API**: Integrace s OpenStreetMap pro aktuální data
 
-```
-cd existing_repo
-git remote add origin https://git.pef.mendelu.cz/location-based-services/ebc-va1-ls-2023-2024/xkolari1.git
-git branch -M main
-git push -uf origin main
-```
+### 💳 Platební funkce
+- **Rozpočítání nákladů**: Sdílení nákladů na cestu mezi více lidmi
+- **QR kódy**: Generování QR kódů pro platby
+- **Bankovní účty**: Validace českých bankovních čísel
 
-## Integrate with your tools
+### 📏 Sledování nájezdu
+- **Historie tachometru**: Zaznamenávání stavu tachometru v čase
+- **Automatické výpočty**: Průměrný roční nájezd a související statistiky
 
-- [ ] [Set up project integrations](https://git.pef.mendelu.cz/location-based-services/ebc-va1-ls-2023-2024/xkolari1/-/settings/integrations)
+## 🛠️ Technologie
 
-## Collaborate with your team
+### Architektura
+- **MVVM Pattern**: Model-View-ViewModel architektura
+- **Jetpack Compose**: Moderní deklarativní UI framework
+- **Hilt**: Dependency injection framework
+- **Navigation Component**: Řízení navigace v aplikaci
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### Databáze a ukládání
+- **Room Database**: Lokální SQLite databáze s ORM
+- **DataStore**: Ukládání nastavení a preferencí
+- **Repository Pattern**: Abstrakce datových zdrojů
 
-## Test and Deploy
+### Síťové komunikace
+- **Retrofit**: HTTP klient pro API komunikaci
+- **Moshi**: JSON serializace/deserializace
+- **OkHttp**: HTTP stack s podporou intercepting
 
-Use the built-in continuous integration in GitLab.
+### UI/UX
+- **Material Design 3**: Moderní design systém
+- **Dark/Light Theme**: Podpora obou témat
+- **Responsive Design**: Adaptivní rozhraní pro různé velikosti obrazovek
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+### Pokročilé funkce
+- **ML Kit**: Rozpoznávání textu z obrázků
+- **CameraX**: Pokročilá práce s kamerou
+- **Google Maps**: Integrace mapových služeb
+- **Location Services**: Práce s GPS a polohou
 
-***
+## 🧪 Testování
 
-# Editing this README
+Aplikace obsahuje komplexní testovací pokrytí:
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+- **Unit testy**: Testování business logiky a validací
+- **UI testy**: Automatizované testování uživatelského rozhraní
+- **Repository testy**: Testování datových vrstev
+- **MockWebServer**: Testování síťových operací
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 📱 Požadavky
 
-## Name
-Choose a self-explaining name for your project.
+- **Android 8.0+** (API level 26)
+- **Kotlin 1.8+**
+- **Google Play Services** (pro mapy a ML Kit)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+## 🚀 Instalace
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+1. Klonujte repository
+2. Otevřete projekt v Android Studio
+3. Nakonfigurujte `local.properties` s potřebnými API klíči
+4. Sestavte a spusťte aplikaci
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 📋 Funkce pro CV
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Tento projekt demonstruje:
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+- **Pokročilé Android vývojářské dovednosti** v Kotlinu
+- **Moderní architekturní vzory** (MVVM, Repository, DI)
+- **Integrace třetích služeb** (Google Maps, ML Kit, Overpass API)
+- **Komplexní databázové operace** s Room
+- **Testování** na všech úrovních aplikace
+- **Material Design** a moderní UI/UX
+- **Asynchronní programování** s Coroutines
+- **Správa stavu** aplikace
+- **Lokalizace** (čeština/angličtina)
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## 🎯 Cíl projektu
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Aplikace byla vyvinuta jako semestrální projekt pro demonstraci pokročilých Android vývojářských technik a moderních přístupů k vývoji mobilních aplikací. Kombinuje praktické užitečné funkce s technickou excelencí.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+---
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+*Projekt vytvořen jako součást studia na Mendelově univerzitě v Brně*
